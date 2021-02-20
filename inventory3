@@ -1,0 +1,10 @@
+[other_servers]
+deb10 
+centOS7-alpha 
+
+[log_server]
+eight 
+
+[web_servers]
+centOS8-beta  
+stream 

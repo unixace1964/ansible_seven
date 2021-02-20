@@ -1,0 +1,12 @@
+---
+
+- hosts: log_server
+  become: true
+  tasks:
+
+  - name: install samba package
+    package:
+      name: samba
+      state: absent
+
+
