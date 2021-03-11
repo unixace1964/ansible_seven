@@ -1,10 +1,10 @@
 [other_servers]
 deb10 
-centOS7-alpha 
+alpha7
 
 [log_server]
 eight 
 
 [web_servers]
-centOS8-beta  
+beta8
 stream 
