@@ -7,7 +7,7 @@
   - name: install updates CentOS
     yum:
       update_only: yes
-      update_casche: yes
+      update_cache: yes
     when: ansible_distribution == "CentOS"
 
   - name: install updates Debian
