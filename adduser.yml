@@ -1,0 +1,26 @@
+---
+
+- hosts: all
+  become: true
+  tasks:
+
+  - name: create anthony user
+    tags: always
+    user:
+        name: anthony
+        groups: root
+
+  - name: add ssh key for anthony
+    tags: always
+    authorized_key:
+        user: anthony
+        key: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJmcPBU9YNddDrDGI/JvnX3VKHQY1p3QrLOyjzwEpCzI ansible"
+    
+
+  - name: add sudoers for anthony
+    copy:
+       src: sudoer_anthony
+       dest: /etc/sudoers.d/anthony
+       owner: root
+       group: root
+       mode: 0440
