@@ -1,0 +1,13 @@
+---
+
+- hosts: all
+  become: true
+  tasks:
+
+  - name: copy a file 
+    copy:
+      src: default.txt
+      dest: /home/tbrown/first_ansible_copied_file
+      owner: root
+      group: root
+      mode: 0644
