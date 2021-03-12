@@ -1,0 +1,18 @@
+---
+
+- hosts: all
+  become: true
+  tasks:
+
+  - name: change text in my test file
+    lineinfile:
+        path: /home/tbrown/first_ansible_copied_file
+        regexp: '^This should'
+        line: This proves that I can change the file with Ansible
+    register: httpd
+
+  - name: restart httpd
+    service:
+        name: httpd
+        state: restarted
+
