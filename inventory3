@@ -8,3 +8,6 @@ eight
 [web_servers]
 beta8
 stream 
+
+[workstations]
+stream
